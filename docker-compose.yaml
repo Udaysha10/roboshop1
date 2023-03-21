@@ -1,0 +1,10 @@
+version: '1.0'
+networks:
+  roboshop:
+   driver: bridge
+services:
+  web:
+   image: web:v1
+   container_name: web
+   ports: 
+   - 80:80
