@@ -2,6 +2,13 @@ version: '1.0'
 networks:
   roboshop:
    driver: bridge
+volumes:
+  mysql:
+    driver: local
+    driver_opts: 
+      o: bind
+      type: none
+      device: /home/ec2-user/mysql
 services:
   web:
    image: web:v1
